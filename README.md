@@ -1,16 +1,18 @@
 # clean_architechture_getx
-
-A new Flutter project.
+This is the initial template of clean architecture with getX state management
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
+flutter clean
+flutter pub get
+add the .env file
+flutter pub run build_runner clean
+flutter pub run build_runner build --delete-conflicting-outputs  
+flutter run 
 
 
 ## Work Flow
-![alt text](/assets/Clean-Architecture-Flutter-Diagram.png?raw=true)
+![alt text](/assets/images/Clean-Architecture-Flutter-Diagram.png)
 ## Project Structure
 ```
 |-- lib
@@ -28,6 +30,8 @@ A few resources to get you started if this is your first Flutter project:
         |-- extenstions
     |-- data
         |-- models
+            |--parameters
+            |--response 
         |-- repositories
         |-- providers
             |-- database

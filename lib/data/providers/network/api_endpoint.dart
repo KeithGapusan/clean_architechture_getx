@@ -1,3 +1,5 @@
+import 'package:clean_architechture_getx/data/providers/environment/environment.dart';
+
 class APIEndpoint {
-  static String get newsapi => "https://newsapi.org/v2";
+  static String get newsapi => Environment.apiUrl;
 }

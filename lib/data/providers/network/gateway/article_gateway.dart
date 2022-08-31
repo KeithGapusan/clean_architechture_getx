@@ -1,3 +1,5 @@
+import 'package:clean_architechture_getx/data/providers/environment/environment.dart';
+
 import '../api_endpoint.dart';
 import '../api_provider.dart';
 import '../api_request_representable.dart';
@@ -40,8 +42,7 @@ class ArticleGateway implements APIRequestRepresentable {
     return HTTPMethod.get;
   }
 
-  Map<String, String> get headers =>
-      {"X-Api-Key": "d809d6a547734a67af23365ce5bc8c02"};
+  Map<String, String> get headers => {"X-Api-Key": Environment.xAuthKey};
 
   Map<String, String> get query {
     switch (type) {
@@ -60,5 +61,5 @@ class ArticleGateway implements APIRequestRepresentable {
   }
 
   @override
-  String get url => endpoint + path;
+  String get url => Environment.apiUrl + path;
 }

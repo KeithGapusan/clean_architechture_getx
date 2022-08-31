@@ -35,8 +35,9 @@ flutter run
         |-- repositories
         |-- providers
             |-- database
+            |-- environments
             |-- network
-                |-- apis
+                |-- gateway
                 |-- api_endpoints.dart
                 |-- api_provider.dart
                 |-- api_representable.dart

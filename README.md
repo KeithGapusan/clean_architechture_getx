@@ -2,14 +2,21 @@
 This is the initial template of clean architecture with getX state management
 
 ## Getting Started
-
+```
 flutter clean
 flutter pub get
+
+*** updating the project details *** 
+pub global activate rename
+pub global run rename --bundleId ph.ubx.yourprojectname.envtype //ex. pub global run rename --bundleId ph.ubx.formbuilder.dev
+pub global run rename --appname ""UBX Form builder""
+
+*** running *** 
 add the .env file
 flutter pub run build_runner clean
 flutter pub run build_runner build --delete-conflicting-outputs  
 flutter run 
-
+```
 
 ## Work Flow
 ![alt text](/assets/images/Clean-Architecture-Flutter-Diagram.png)

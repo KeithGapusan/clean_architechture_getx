@@ -1,12 +1,63 @@
 # clean_architechture_getx
-
-A new Flutter project.
+This is the initial template of clean architecture with getX state management
 
 ## Getting Started
+```
+flutter clean
+flutter pub get
 
-This project is a starting point for a Flutter application.
+*** updating the project details *** 
+pub global activate rename
+pub global run rename --bundleId ph.ubx.yourprojectname.envtype //ex. pub global run rename --bundleId ph.ubx.formbuilder.dev
+pub global run rename --appname ""UBX Form builder""
 
-A few resources to get you started if this is your first Flutter project:
+*** running *** 
+add the .env file
+flutter pub run build_runner clean
+flutter pub run build_runner build --delete-conflicting-outputs  
+flutter run 
+```
+
+## Work Flow
+![alt text](/assets/images/Clean-Architecture-Flutter-Diagram.png)
+## Project Structure
+```
+|-- lib
+    |-- main.dart
+    |-- app
+        |-- core
+            |-- usecases
+        |-- config
+            |-- app_constants.dart
+            |-- app_colors.dart
+        |   -- app_text_styles.dart
+        |-- services
+        |-- util
+        |-- types
+        |-- extenstions
+    |-- data
+        |-- models
+            |--parameters
+            |--response 
+        |-- repositories
+        |-- providers
+            |-- database
+            |-- environments
+            |-- network
+                |-- gateway
+                |-- api_endpoints.dart
+                |-- api_provider.dart
+                |-- api_representable.dart
+    |-- domain
+        |-- entities
+        |-- repositories
+        |-- usecases
+    |-- presentation
+        |-- controllers
+        |-- pages
+        |-- views
+        |-- app.dart
+```
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
